@@ -1,0 +1,165 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Poppins:wght@400;500;600;700;800&family=Roboto:wght@400;500&display=swap');
+
+/* VARIABLES */
+:root{
+    --primary-color:#d10df4;
+    --dark-color: #0F0F0F;
+    --gray-color: gray;
+
+    --h1-font-size: 40px;
+    --h2-font-size: 32px;
+    --small-font-size: 14px;
+}
+/* RESET CSS */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+img{
+    max-width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+/* GLOBAL CSS */
+ section{
+    padding: 70px 0;
+ }
+section .section-title{
+    font-size: var(--h2-font-size);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.btn-purple{
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-purple:hover{
+    background-color: var(--dark-color);
+    color: white;
+}
+
+.text-purple{
+    color: var(--primary-color);
+}
+
+.text-dark{
+    color: var(--dark-color);
+}
+
+.fs-7{
+    font-size: var(--small-font-size);
+}
+
+.form-control:focus{
+    box-shadow: none;
+    border-color: var(--primary-color);
+}
+/* CSS PER SECTION */
+
+/* NAVBAR */
+.navbar{
+    -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+.navbar .navbar-brand{
+    animation: flicker 1.5s infinite alternate;
+    color: var(--dark-color);
+}
+
+/* flickering animation */
+@keyframes flicker{
+
+    0%, 18%, 22%, 25%, 53%, 57%, 100%{
+        text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #d10df4,
+        0 0 82px #d10df4,
+        0 0 92px #d10df4,
+        0 0 102px #d10df4,
+        0 0 151px #d10df4;
+    }
+
+    20%, 24%, 55%{
+        text-shadow: none;
+    }
+}
+
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-item .nav-link.active{
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* HEADER */
+.header-section .header-title{
+    font-size: var(--h1-font-size);
+}
+
+.header-section .header-skills{
+    color: var(--dark-color);
+}
+
+.header-section .header-skills:hover{
+    color: var(--primary-color);
+}
+
+.header-section .header-skills i{
+    transition: transform .3s;
+}
+
+.header-section .header-skills:hover i{
+    transform: translateX(.25rem);
+}
+
+.header-section .header-img,
+.skills-section .skills-img{
+    width: 90%;
+}
+.home__blob{
+    width: 400px;
+    fill: var(--primary-color);
+  }
+  
+  .home__blob-img{
+    width: 180px;
+    height: 170px;
+  }
+/* PORTFOLIO */
+.portfolio-section .card .card-img-top{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .portfolio-section .card .card-img-top{
+        height: 100px;
+    }
+}
+
+/* SKILLS */
+.skills-section{
+    background-color: #eeeeee;
+}
+
+.skills-section .progress-bar{
+    width: 100%;
+    height: 10px;
+    border-radius: 10px;
+    background-color: var(--gray-color);
+}
+footer{
+    background-color: #0F0F0F;
+}
